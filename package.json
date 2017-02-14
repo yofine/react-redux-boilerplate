@@ -1,0 +1,143 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "React Redux Boilerplate",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.dev.js --inline --progress",
+    "build": "rm -rf ./build && webpack --progress --profile --colors --config ./webpack.prod.js"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yofine/react-redux-boilerplate.git"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "babel-preset-stage-0"
+    ],
+    "plugins": [
+      "react-hot-loader/babel",
+      "transform-decorators-legacy",
+      "lodash",
+      [
+        "import",
+        {
+          "libraryName": "antd"
+        }
+      ],
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "src": "./src"
+          }
+        }
+      ]
+    ],
+    "env": {
+      "dev": {
+        "plugins": []
+      },
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "nyc": {
+    "include": [
+      "index.js",
+      "src/**/*.js",
+      "tools/lib/*.js"
+    ],
+    "exclude": [
+      "tools/**/templates",
+      ".tmp"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "cache": false,
+    "sourceMap": false,
+    "instrument": true
+  },
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^2.7.1",
+    "axios": "^0.15.3",
+    "html-webpack-plugin": "^2.28.0",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.2",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "sass": "^0.5.0",
+    "sass-loader": "^6.0.0",
+    "webpack-dashboard": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-import": "^1.1.0",
+    "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-lodash": "^3.2.8",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "body-parser": "^1.16.0",
+    "chai": "^3.5.0",
+    "compression": "^1.6.2",
+    "core-decorators": "^0.15.0",
+    "css-loader": "^0.26.1",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "estraverse": "^4.2.0",
+    "estraverse-fb": "^1.3.1",
+    "express": "^4.14.1",
+    "express-history-api-fallback": "^2.0.0",
+    "file-loader": "^0.10.0",
+    "jsdom": "^9.10.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "lodash-webpack-plugin": "^0.11.0",
+    "mocha": "^3.0.2",
+    "mocha-webpack": "^0.7.0",
+    "nock": "^9.0.4",
+    "npm-run": "^4.1.0",
+    "nyc": "^10.1.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "redux-logger": "^2.8.1",
+    "redux-mock-store": "^1.2.2",
+    "sinon": "^1.17.7",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "latest",
+    "webpack-bundle-analyzer": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "latest",
+    "webpack-hot-middleware": "^2.16.1",
+    "webpack-node-externals": "^1.3.3"
+  }
+}

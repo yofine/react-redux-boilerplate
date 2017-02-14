@@ -1,0 +1,14 @@
+.input {
+  border-radius: 3px;
+  border: 4px solid #ddd;
+  color: #555;
+  font-size: 17px;
+  padding: 10px 20px;
+  display: inline-block;
+  outline: 0;
+}
+
+body {
+  text-align: center;
+  padding-top: 100px;
+}
